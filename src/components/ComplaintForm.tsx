@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Send, Loader2 } from "../assets/icons";
-import { ComplaintRequest, ComplaintResponse } from "../types";
+import { ComplaintResponse } from "../types";
 import { useNavigate } from "react-router-dom";
 //import { complaintService } from "../services/Complaints";
 import { ErrorPopup } from "./ErrorPopup";
@@ -20,10 +20,9 @@ export function ComplaintForm() {
 
     setLoading(true);
     setError(null);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const complaintRequest: ComplaintRequest = {
-      text: complaint,
-    };
+    // const complaintRequest: ComplaintRequest = {
+    //   text: complaint,
+    // };
     setTimeout(async () => {
       try {
         //const datanonUse = await complaintService.submitComplaint(complaintRequest);
